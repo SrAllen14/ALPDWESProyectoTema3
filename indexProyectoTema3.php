@@ -16,6 +16,7 @@
 <body>
     <nav>
         <h2>DWES - Tema 3</h2>
+        <h2>Características del lenguaje PHP</h2>
         <h2>Álvaro Allén Perlines</h2>
     </nav>
     <main>
@@ -23,7 +24,7 @@
             <tbody><tr>
                 <td>0</td>
                 <td>Hola mundo y phpinfo().</td>
-                <td><a href=""><img src="webroot/media/play.png" alt="boton_play"></a></td>
+                <td><a href="ejercicioPHP/ejercicio0.php"><img src="webroot/media/play.png" alt="boton_play"></a></td>
                 <td><a href=""><img src="webroot/media/code.png" alt="boton_code"></a></td>
             </tr>
             <tr>
