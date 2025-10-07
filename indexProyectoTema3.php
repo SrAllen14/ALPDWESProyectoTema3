@@ -24,7 +24,7 @@
             <tbody><tr>
                 <td>0</td>
                 <td>Hola mundo y phpinfo().</td>
-                <td><a href="ejercicioPHP/ejercicio0.php"><img src="webroot/media/play.png" alt="boton_play"></a></td>
+                <td><a href="ejerciciosPHP/ejercicio0.php"><img src="webroot/media/play.png" alt="boton_play"></a></td>
                 <td><a href=""><img src="webroot/media/code.png" alt="boton_code"></a></td>
             </tr>
             <tr>
