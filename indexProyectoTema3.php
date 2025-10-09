@@ -25,13 +25,13 @@
                 <td>0</td>
                 <td>Hola mundo y phpinfo().</td>
                 <td><a href="ejerciciosPHP/ejercicio0.php"><img src="webroot/media/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/media/code.png" alt="boton_code"></a></td>
+                <td><a href="codigosPHP/codigo0.php"><img src="webroot/media/code.png" alt="boton_code"></a></td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>Inicializar variables de los distintos tipos de datos básicos(string, int, float, bool) y mostrar los datos por pantalla (echo, print, printf, print_r,var_dump).</td>
-                <td><a href=""><img src="webroot/media/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/media/code.png" alt="boton_code"></a></td>
+                <td><a href="ejerciciosPHP/ejercicio1.php"><img src="webroot/media/play.png" alt="boton_play"></a></td>
+                <td><a href="codigosPHP/codigo1.php"><img src="webroot/media/code.png" alt="boton_code"></a></td>
             </tr>
             <tr>
                 <td>2</td>
