@@ -12,14 +12,14 @@
              */
         
             // Inicializamos las variables.
-            $fechaHoy = new DateTime("now", new DateTimeZone('Europe/Madrid'));
+            $oFechaHoy = new DateTime("now", new DateTimeZone('Europe/Madrid'));
             
             // Mostramos la fecha actual en Madrid, España.
-            echo "Fecha actual: " . $fechaHoy->format('d-m-y h:i:s');
+            echo "Fecha actual: " . $oFechaHoy->format('d-m-y h:i:s');
             echo "<br>";
             
             // Muestra por pantalla la fecha actual con 60 dias añadidos.
-            echo "Fecha dentro de 60 días: " . $fechaHoy->add(new DateInterval('P60D'))->format('d-m-y h:i:s');
+            echo "Fecha dentro de 60 días: " . $oFechaHoy->add(new DateInterval('P60D'))->format('d-m-y h:i:s');
         ?>
     </body>
 </html>

@@ -14,8 +14,14 @@
             // Ajustamos la fecha y hora a la zona de Lisboa.
             date_default_timezone_set("Europe/Lisbon");
             
+            $fecha = new DateTime("now", new DateTimeZone("Europe/Lisbon"));
+            
             // Usamos date("formato") para poner el formato de fecha y hora de Portugal.
             echo date("d-m-y h:i:s");
+            echo "<br>";
+            
+            // Mostrar por pantalla la fecha con el formato en portugés.
+            echo "Hoy es " . $fecha->format("l") . " " . $fecha->format("d") . " de " . $fecha->format("M") . " de " . $fecha->format("y") . " y la hora es " . $fecha->format("h:i:s a");
         ?>
     </body>
 </html>

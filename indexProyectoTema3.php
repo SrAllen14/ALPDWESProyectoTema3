@@ -28,7 +28,7 @@
         div.tabla{
             margin:10px auto 10px auto;
             padding: 10px;
-            width: 50%;
+            width: 1000px;
             
             border-radius: 20px;
             background-color: white; 
@@ -41,11 +41,12 @@
         }
         img{
             width: 50px;
+            height: 50px;
         }
         
         table{
             border-collapse: collapse;
-            width: 90%;
+            width: 750px;
 
         }
         
@@ -128,8 +129,8 @@
                 <tr>
                     <td>8</td>
                     <td>Mostrar la dirección IP del equipo desde el que estás accediendo.</td>
-                    <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                    <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio8.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo8.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>9</td>
