@@ -13,13 +13,12 @@
             #includes <CURLFile.io>
              
             // Inicializamos las variables.
-            $archivo = './ejercicio7.php';
+            $archivo = $_SERVER['PHP_SELF'];
             
             // basename() retorna el nombre del archivo que tiene la ruta indicada como parámetro.
-            $nombreArchivo = basename($archivo);
             
             // Mostramos por pantalla el nombre del archivo.
-            echo "El nombre de este archivo es: " . $nombreArchivo;
+            echo "La ruta de este archivo es: " . $archivo;
             
             /*
              * Otra opción sería:

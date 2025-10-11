@@ -135,14 +135,14 @@
                 <tr>
                     <td>9</td>
                     <td>Mostrar el path donde se encuentra el fichero que se está ejecutando.</td>
-                    <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                    <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio9.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo9.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>10</td>
                     <td>Mostrar el contenido del fichero que se está ejecutando.</td>
-                    <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                    <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio10.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo10.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>11</td>
