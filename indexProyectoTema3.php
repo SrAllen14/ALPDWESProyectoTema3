@@ -156,7 +156,7 @@
                 <tr>
                     <td>12</td>
                     <td>Mostrar el contenido de las variables superglobales (utilizando print_r() y foreach()).</td>
-                    <td><a href="ejerciciosPHP/ejercicio12.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href=""></a></td>
                     <td><a href=""></a></td>
                 </tr>
                 <tr>
@@ -174,14 +174,14 @@
                 <tr>
                     <td>15</td>
                     <td>Crear e inicializar un array con el sueldo percibido de lunes a domingo. Recorrer el array para calcular el sueldo percibido durante la semana. (Array asociativo con los nombres de los días de la semana).</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio15.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo15.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>16</td>
                     <td>Recorrer el array anterior utilizando funciones para obtener el mismo resultado.</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio16.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo16.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>17</td>
