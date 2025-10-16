@@ -38,6 +38,7 @@
             margin: 10px;
             margin-left: auto;
             margin-right: auto;
+            
         }
         img{
             width: 50px;
@@ -67,6 +68,8 @@
                text-decoration: none; 
             }
         }
+        
+
     </style>
 </head>
 <body>
