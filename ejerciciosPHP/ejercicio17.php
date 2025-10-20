@@ -4,6 +4,7 @@
         <title>Ejercicio 17</title>
         <style>
             td{
+                font-size: 12px;
                 width: 50px;
                 height: 50px;
                 border: 1px solid black;
@@ -15,6 +16,10 @@
             
             .ocupado{
                 background-color: lightcoral;
+            }
+            
+            .filas{
+                background-color: lightsalmon;
             }
         </style>
     </head>
@@ -65,9 +70,10 @@
             echo "<table>";
             for($i = 0; $i < 20; $i++){
                 echo "<tr>";
+                echo "<td class='filas'>Fila ".($i+1)."</td>";
                 for($j = 0; $j < 15; $j++){
                     if($mTeatro[$i][$j] === " x "){
-                        echo "<td class='libre'>" . $mTeatro[$i][$j]. "</td>";
+                        echo "<td class='libre'>F".($i+1)."-A".($j+1)."</td>";
                     } else{
                         echo "<td class='ocupado'>" . $mTeatro[$i][$j]. "</td>";
                     }
