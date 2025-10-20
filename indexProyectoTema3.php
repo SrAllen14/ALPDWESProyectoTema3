@@ -160,8 +160,8 @@
                 <tr>
                     <td>12</td>
                     <td>Mostrar el contenido de las variables superglobales (utilizando print_r() y foreach()).</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio12.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo12.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>13</td>
@@ -216,7 +216,7 @@
                     <td>Construir un formulario para recoger un cuestionario realizado a una persona y enviarlo a una página Tratamiento.php para que muestre
      las preguntas y las respuestas recogidas.</td>
                     <td><a href="ejerciciosPHP/ejercicio21.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="codigosPHP/codigo21.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>22</td>
