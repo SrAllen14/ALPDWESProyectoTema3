@@ -196,8 +196,8 @@
                 <tr>
                     <td>18</td>
                     <td>Recorrer el array anterior utilizando funciones para obtener el mismo resultado.</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio18.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo18.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>19</td>
