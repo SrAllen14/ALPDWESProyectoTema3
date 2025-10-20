@@ -7,19 +7,23 @@
                 box-sizing: border-box;
                 margin: 0;
             }
+            
+            label{
+                width: 250px;
+            }
         </style>
     </head>
     <body>
-        <form action="pull"> 
+        <form action="tratamiento.php" method="post"> 
             <fieldset>
                 <legend>Formulario básico</legend>
                 <label for='name'>Nombre:</label>
-                <input type="text" id='name' placeholder="Nombre...">
+                <input name="name" type="text" id='name' placeholder="Nombre...">
                 <br>
                 <label for='age'>Edad:</label>
-                <input type='number' id="age">
+                <input name="age" type='number' id="age">
                 <br>
-                <input type="button" name="enviar" value="Enviar">
+                <input type="submit" name="enviar" value="Enviar">
             </fieldset>
         </form>
         <?php
@@ -27,6 +31,9 @@
              * @author Álvaro Allén Perlines
              * @since 17-10-2025
              * 
+             * Creamos un formulario el cual será mostrado por el archivo tratamiento.php.
+             * Al pulsar el boton enviar se almacenaran en la variable $_REQUEST. 
+             * Para ver más código ir al archivo tratamiento.php.
              */
         ?>
     </body>
