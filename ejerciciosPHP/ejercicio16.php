@@ -48,6 +48,24 @@
             echo 'El salario diario es: <br>';
 
             printf(mostrarSueldos($aSueldoSemanal).'La cantidad semanal ha sido: ' . acumularSueldo($aSueldoSemanal));
+            
+            
+            
+            // Este ejercicio ha sido realizado con funciones creadas por mi mismo debido a una confusión con el enunciado.
+            // Las siguientes lineas de código muestran como se debe hacer tal cual lo pide el profesor.
+            
+            echo "<h2>Utilización de las funciones reset(), next(), current() y key() para recorrer arrays.</h2>";
+            //Le damos valor cero a la variable que acumula el sueldo semanal.
+            $iCantidad = 0;
+            //Usando la función reset() situamos el puntero en la primera posición del array.
+            reset($aSueldoSemanal);
+            
+            do{
+                $iCantidad += current($aSueldoSemanal);
+                printf("El ".key($aSueldoSemanal)." cobraste: ". current($aSueldoSemanal)."<br>");
+            }while(next($aSueldoSemanal));          // Usando next() movemos el puntero una posición adelante en nuestro array.
+            
+            printf("La cantidad total semanal es: ".$iCantidad);
         ?>
     </body>
 </html>
