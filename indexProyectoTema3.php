@@ -222,8 +222,8 @@
                     <td>22</td>
                     <td>Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la misma página las preguntas y las respuestas
      recogidas.</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio22.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo22.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>23</td>
