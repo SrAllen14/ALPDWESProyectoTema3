@@ -2,6 +2,33 @@
 <html>
     <head>
         <title>Ejercicio 12</title>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0 auto;
+            }
+            
+            h2{
+                margin-top: 10px;
+                text-align: center;
+            }
+            
+            table{
+                border-collapse: collapse;
+                
+                & td{
+                    border: 1px solid black;
+                }
+            }
+            
+            .nombre{
+                background-color: lightblue;
+            }
+
+            .valor{
+                background-color: antiquewhite;
+            }
+        </style>
     </head>
     <body>
         <?php
@@ -11,62 +38,142 @@
              * Mostrar el contenido de las variables superglobales (utilizando print_r() y foreach()).
              */
             
-            // Mostrando el contenido de la variable superglobal $GLOBALS que contiene el resto de variables superglobales.
-            echo '<h2>Variable: $GLOBALS</h2>';
-            print_r ($GLOBALS);
-            
-            echo '<br>';
-            echo '<br>';
-            // Mostramos el contenido de la variable superglobal $_SERVER
-            echo '<h2>Variable: $_SERVER</h2>';
-            print_r ($_SERVER);
-            echo '<br>';
-            echo '<br>';
-            // Mostramos el contenido de la variable superglobal $_GET
-            echo '<h2>Variable: $_GET</h2>';
-            print_r ($_GET);
-            echo '<br>';
-            echo '<br>';
-            // Mostramos el contenido de la variable superglobal $_POST
-            echo '<h2>Variable: $_POST</h2>';
-            print_r ($_POST);
-            echo '<br>';
-            echo '<br>';
-            // Mostramos el contenido de la variable superglobal $_FILES
-            echo '<h2>Variable: $_FILES</h2>';
-            print_r ($_FILES);
-            echo '<br>';
-            echo '<br>';
-            // Mostramos el contenido de la variable superglobal $_COOKIE
-            echo '<h2>Variable: $_COOKIE</h2>';
-            print_r ($_COOKIE);
-            echo '<br>';
-            echo '<br>';
-            // Mostramos el contenido de la variable superglobal $_SESSION
-            echo '<h2>Variable: $-SESSION</h2>';
-            print_r ($_SESSION);
-            echo '<br>';
-            echo '<br>';
-            // Mostramos el contenido de la variable superglobal $_REQUEST
-            echo '<h2>Variable: $_REQUEST</h2>';
-            print_r ($_REQUEST);
-            echo '<br>';
-            echo '<br>';
-            // Mostramos el contenido de la variable superglobal $_ENV
-            echo '<h2>Variable: $_ENV</h2>';
-            print_r ($_ENV);
-            
-            
-            
-            // Ahora vamos a mostrar todas estas variables de la forma correcta.
-            print_r('<table>');
-            foreach ($_SERVER as $vSuperGlobal => $vValor) {
-                print_r (`<tr> 
-                            <td>$vSuperGlobal</td>
-                            <td>$vValor</td>
-                        </tr>`);
+            // Mostrando el contenido de las variables superglobales. Vamos a usar bucles como for() o foreach().
+            echo '<h2>Valores de la variable superglobal: $_SERVER</h2>';
+            echo "<table>";
+            if(!empty($_SERVER)){
+                foreach ($_SERVER as $key => $value) {
+                    echo "<tr>";
+                    echo "<td class='nombre'>{$key}</td>";
+                    echo "<td class='valor'>{$value}</td>";
+                    echo "</tr>";
+                }
+            } else{
+                echo "<tr>";
+                echo "<td class='nombre'>No hay variable</td>";
+                echo "<td class='valor'>No hay valor</td>";
+                echo "</tr>";
             }
-            print_r('</table>');
+            echo "</table>";
+            
+            echo '<h2>Valores de la variable superglobal: $_SESSION</h2>';
+            echo "<table>";
+            if(!empty($_SESSION)){
+                foreach ($_SESSION as $key => $value) {
+                    echo "<tr>";
+                    echo "<td class='nombre'>{$key}</td>";
+                    echo "<td class='valor'>{$value}</td>";
+                    echo "</tr>";
+                }
+            }  else{
+                echo "<tr>";
+                echo "<td class='nombre'>No hay variable</td>";
+                echo "<td class='valor'>No hay valor</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+            
+            echo '<h2>Valores de la variable superglobal: $_REQUEST</h2>';
+            echo "<table>";
+            if(!empty($_REQUEST)){
+                foreach ($_REQUEST as $key => $value) {
+                    echo "<tr>";
+                    echo "<td class='nombre'>{$key}</td>";
+                    echo "<td class='valor'>{$value}</td>";
+                    echo "</tr>";
+                }
+            } else{
+                echo "<tr>";
+                echo "<td class='nombre'>No hay variable</td>";
+                echo "<td class='valor'>No hay valor</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+            
+            echo '<h2>Valores de la variable superglobal: $_ENV</h2>';
+            echo "<table>";
+            if(!empty($_ENV)){
+                foreach ($_ENV as $key => $value) {
+                    echo "<tr>";
+                    echo "<td class='nombre'>{$key}</td>";
+                    echo "<td class='valor'>{$value}</td>";
+                    echo "</tr>";
+                }
+            } else{
+                echo "<tr>";
+                echo "<td class='nombre'>No hay variable</td>";
+                echo "<td class='valor'>No hay valor</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+            
+            echo '<h2>Valores de la variable superglobal: $_COOKIE</h2>';
+            echo "<table>";
+            if(!empty($_COOKIE)){
+                foreach ($_COOKIE as $key => $value) {
+                    echo "<tr>";
+                    echo "<td class='nombre'>{$key}</td>";
+                    echo "<td class='valor'>{$value}</td>";
+                    echo "</tr>";
+                }
+            } else{
+                echo "<tr>";
+                echo "<td class='nombre'>No hay variable</td>";
+                echo "<td class='valor'>No hay valor</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+            
+            echo '<h2>Valores de la variable superglobal: $_POST</h2>';
+            echo "<table>";
+            if(!empty($_POST)){
+                foreach ($_POST as $key => $value) {
+                    echo "<tr>";
+                    echo "<td class='nombre'>{$key}</td>";
+                    echo "<td class='valor'>{$value}</td>";
+                    echo "</tr>";
+                }
+            } else{
+                echo "<tr>";
+                echo "<td class='nombre'>No hay variable</td>";
+                echo "<td class='valor'>No hay valor</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+            
+            echo '<h2>Valores de la variable superglobal: $_GET</h2>';
+            echo "<table>";
+            if(!empty($_GET)){
+                foreach ($_GET as $key => $value) {
+                    echo "<tr>";
+                    echo "<td class='nombre'>{$key}</td>";
+                    echo "<td class='valor'>{$value}</td>";
+                    echo "</tr>";
+                }
+            } else{
+                echo "<tr>";
+                echo "<td class='nombre'>No hay variable</td>";
+                echo "<td class='valor'>No hay valor</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+            
+            echo '<h2>Valores de la variable superglobal: $_FILES</h2>';
+            echo "<table>";
+            if(!empty($_FILES)){
+                foreach ($_FILES as $key => $value) {
+                    echo "<tr>";
+                    echo "<td class='nombre'>{$key}</td>";
+                    echo "<td class='valor'>{$value}</td>";
+                    echo "</tr>";
+                }
+            } else{
+                echo "<tr>";
+                echo "<td class='nombre'>No hay variable</td>";
+                echo "<td class='valor'>No hay valor</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
         ?>
     </body>
 </html>

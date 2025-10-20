@@ -52,8 +52,12 @@
         }
         
         td{
-            text-align: center;
+            height: 50px;
             border: 1px solid gray;
+        }
+        td:nth-of-type(1){
+            width: 50px;
+            text-align: center;
         }
         
         footer{
@@ -89,7 +93,7 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>Inicializar variables de los distintos tipos de datos básicos(string, int, float, bool) y mostrar los datos por pantalla (echo, print, printf, print_r,var_dump).</td>
+                    <td>Inicializar variables de los distintos tipos de datos básicos y mostrar los datos por pantalla.</td>
                     <td><a href="ejerciciosPHP/ejercicio1.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
                     <td><a href="codigosPHP/codigo1.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
@@ -156,8 +160,8 @@
                 <tr>
                     <td>12</td>
                     <td>Mostrar el contenido de las variables superglobales (utilizando print_r() y foreach()).</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio12.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo12.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>13</td>
@@ -167,13 +171,13 @@
                 </tr>
                 <tr>
                     <td>14</td>
-                    <td>Comprobar las librerías que estás utilizando en tu entorno de desarrollo y explotación. Crear tu propia librería de funciones y estudiar la forma de usarla en el entorno de desarrollo y en el de explotación.</td>
+                    <td>Comprobar las librerías que estás utilizando en tu entorno de desarrollo y explotación. Crear tu propia librería de funciones.</td>
                     <td><a href=""></a></td>
                     <td><a href=""></a></td>
                 </tr>
                 <tr>
                     <td>15</td>
-                    <td>Crear e inicializar un array con el sueldo percibido de lunes a domingo. Recorrer el array para calcular el sueldo percibido durante la semana. (Array asociativo con los nombres de los días de la semana).</td>
+                    <td>Crear e inicializar un array con el sueldo percibido de lunes a domingo. Recorrer el array para calcular el sueldo percibido durante la semana.</td>
                     <td><a href="ejerciciosPHP/ejercicio15.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
                     <td><a href="codigosPHP/codigo15.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
@@ -185,15 +189,15 @@
                 </tr>
                 <tr>
                     <td>17</td>
-                    <td>Inicializar un array (bidimensional con dos índices numéricos) donde almacenamos el nombre de las personas que tienen reservado el asiento en un teatro de 20 filas y 15 asientos por fila. (Inicializamos el array ocupando únicamente 5 asientos). Recorrer el array con distintas técnicas (foreach(), while(), for()) para mostrar los asientos ocupados en cada fila y las personas que lo ocupan.</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td>Inicializar un array bidimensional donde almacenamos el nombre de las personas que tienen reservado el asiento en un teatro de 20 filas y 15 asientos por fila. (Inicializamos el array ocupando únicamente 5 asientos).</td>
+                    <td><a href="ejerciciosPHP/ejercicio17.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo17.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>18</td>
                     <td>Recorrer el array anterior utilizando funciones para obtener el mismo resultado.</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio18.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo18.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>19</td>
@@ -211,15 +215,15 @@
                     <td>21</td>
                     <td>Construir un formulario para recoger un cuestionario realizado a una persona y enviarlo a una página Tratamiento.php para que muestre
      las preguntas y las respuestas recogidas.</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio21.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo21.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>22</td>
                     <td>Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la misma página las preguntas y las respuestas
      recogidas.</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio22.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo22.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>23</td>
