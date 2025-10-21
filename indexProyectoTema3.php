@@ -227,10 +227,10 @@
                 </tr>
                 <tr>
                     <td>23</td>
-                    <td>Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la misma página las preguntas y las respuestas
+                    <td>(INCOMPLETO)Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la misma página las preguntas y las respuestas
      recogidas; en el caso de que alguna respuesta esté vacía o errónea volverá a salir el formulario con el mensaje correspondiente.</td>
-                    <td><a href=""></td>
-                    <td><a href=""></td>
+                    <td><a href="ejerciciosPHP/ejercicio23.php"><img src="webroot/images/play.png" alt="boton_play"></td>
+                    <td><a href="codigosPHP/codigo23.php"><img src="webroot/images/code.png" alt="boton_code"></td>
                 </tr>
                 <tr>
                     <td>24</td>
