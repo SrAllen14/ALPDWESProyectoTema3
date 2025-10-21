@@ -273,7 +273,7 @@
             <a href="/index.html">
            Álvaro Allén Perlines
             </a>
-            <time datetime="2025-04-09">09-04-2025</time>
+            <time datetime="2025-10-21">21-10-2025</time>
         </div>
     </footer>
 
