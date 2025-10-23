@@ -15,52 +15,69 @@
             
         
         
+            // Importamos la librería necesaria para la validación de los campos
+            require_once '../core/231018libreriaValidacion.php';
             // Declaramos e inicializamos las variables.
-            // En este caso es un array con clave igual al tipo de respuesta y el value igual al valor de dicha respuesta.
-            $aRespuesta = ["name"=>"null", "age"=>null];
+            $aRespuestas = ["nombre"=>null, "edad"=>null];          // Array que almacena las respuestas correctas.
+            $aErrores = ["nombre"=>null, "edad"=>null];             // Array que almacena los datos erroneos.
+            $entradaOk = true;                                      // Variable booleana que indica o no errores al enviar el formulario.
             
             // isset() comprueba que se ha dado al botón de enviar. 
-            // True: nos muestra las respuestas enviadas en los campos.
-            // False: nos muestra el contenido del formulario.
+            // True: valida los datos introducidos.
+            // False: la variable booleana $entradaOk recibe el valor true.
             if(isset($_REQUEST["enviar"])){
-                // Comprobamos que el campo "name" no está vacio.
-                // True: asignamos el valor del campo al array con la clave correspondiente.
-                // False: mostramos al lado del campo un mensaje de error.
-                if(!empty($_REQUEST["name"])){
-                    // Le damos el valor a cada uno de los campos con el valor obtenido del formulario.
-                    $aRespuesta["name"] = $_REQUEST['name'];
-                } else{
-                    echo "Campo vacio<br>";
-                }
+                // Validamos los datos para cada campo del formulario.
                 
-                // Comprobamos que el campo "age" devuelve un número entre 0 y 100 ambos incluidos.
-                // True: asignamos el valr del campo al array con la clave correspondiente.
-                // False: mostramos al lado del campo un mensaje de error.
-                if($_REQUEST["age"] >= 0 && $_REQUEST["age"] <= 100){
-                    // Le damos el valor a cada uno de los campos con el valor obtenido del formulario.
-                    $aRespuesta["age"] = $_REQUEST['age'];
-                } else{
-                    echo "Valor incorrecto<br>";
-                }
+                $aErrores['nombre'] = validacionFormularios::comprobarAlfabetico($_REQUEST['nombre'],100,0,1);
+                $aErrores['edad'] = validacionFormularios::comprobarEntero($_REQUEST['edad']);
                 
-                echo "El nombre es: ".$aRespuesta["name"]."<br>";
-                echo "La edad es: ".$aRespuesta["age"]."<br>";
+                // Recorremos el array de errores para comprobar si ha habido alguno.
+                // true: la variable booleana $entradaOk recibe el valor false.
+                foreach ($aErrores as $campo => $valor) {
+                    if($valor != null){
+                        $entradaOk = false;
+                    }
+                }
             } else{
+                $entradaOk = false;                                 // Si el formulario no se ha rellenado nunca.
+            }
+            
+            // Tratamiento del formulario.
+            if($entradaOk){
+                //En caso de que el formulario haya sido rellenado de manera correcta.
+                
+                $aRespuestas['nombre'] = $_REQUEST['nombre'];       // Añadir al campo nombre el valor enviado desde el formulario.
+                $aRespuestas['edad'] = $_REQUEST['edad'];           // Añadir al campo edad el valor introducido en el formulario.
+                
+                // Recorremos el array de respuestas con un foreach para mostrar las respuestas.
+                
+                foreach ($aRespuestas as $campo => $valor) {
+                    print("Su $campo es: ".$valor."<br>");
+                }
+            } else{
+                // En caso de no haber rellenado el formulario de manera correcta.
         ?>
-        <form action="<?php $_SERVER["PHP_SELF"]  //Aprovechamos que $_SERVER guarda el nombre del archivo actual.?>" method="post">
-            <fieldset>
-                <legend>Formulario básico</legend>
-                <label for='name'>Nombre:</label>
-                <input name="name" type="text" id='name' placeholder="Nombre...">
-                <br>
-                <label for='age'>Edad:</label>
-                <input name="age" type='number' id="age">
-                <br>
-                <input type="submit" name="enviar" value="Enviar">
-            </fieldset>
-        </form>
+            <form action="<?php $_SERVER["PHP_SELF"]                // Aprovechamos que $_SERVER guarda el nombre del archivo actual.?>" method="post">
+                <fieldset>
+                    <legend>Formulario básico</legend>
+                    <label for='nombre'>Nombre:</label>
+                    <input type='text' name='nombre' class='nombre'/>
+                    <?php
+                        if($aErrores['nombre'] != null) {echo "<a style='color:red;'>{$aErrores['nombre']}</a>";}
+                    ?>
+                    <br>
+                    <label for='edad'>Edad:</label>
+                    <input type='number' name='edad' class='edad'/>
+                    <?php
+                        if($aErrores['edad'] != null){ echo"<a style='color:red;'>{$aErrores['edad']}</a>";}
+                    ?>
+                    <br>
+                    <input type="submit" name="enviar" value="Enviar">
+                </fieldset>
+            </form>
         <?php
             }
         ?>
+        
     </body>
 </html>
