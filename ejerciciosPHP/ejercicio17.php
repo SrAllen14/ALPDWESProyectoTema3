@@ -21,6 +21,14 @@
             .filas{
                 background-color: lightsalmon;
             }
+            
+            .columnas{
+                background-color: lightblue;
+            }
+            
+            .vacio{
+                border: 0px;
+            }
         </style>
     </head>
     <body>
@@ -32,52 +40,38 @@
              * personas que tienen reservado un asiento en un teatro de 20 filas
              * y 15 asientos por fila.
              */
-        
-            $FILAS = 20;
-            $ASIENTOS = 15;
+             
+            // Declaramos las constantes $FILAS y $ASIENTOS que almacenan el número 
+            // de filas y asientos que tiene el teatro.
+            define('NUMFILAS', '20');
+            define('NUMASIENTOS', '15');
             // Declaramos las variables.
-            $aNombres = ["Pepe", "Manuel", "Teresa", "Ainhoa", "Miguel"];
-            $mTeatro;
-            $bPosicionOcupada = false;
+            $aNombres = ['Pepe', 'Manuel', 'Teresa', 'Ainhoa', 'Miguel'];
+            $aTeatro;
             
             // Inicializamos la matriz de 20X15 con " x " como valor por defecto.
-            for($i = 1; $i <= $FILAS; $i++){
-                for($j = 1; $j <= $ASIENTOS; $j++){
-                    $mTeatro[$i][$j] = " x ";
+            for($iFila = 1; $iFila <= NUMFILAS; $iFila++){
+                for($iColumna = 1; $iColumna <= NUMASIENTOS; $iColumna++){
+                    $aTeatro[$iFila][$iColumna] = null;
                 }
             }
             
-            $i=0;
-            
-            // Situamos los nombres del array dentro de la matriz de manera aleatoria.
-            // Controlamos que no se sobreescriban los nombres.
-            while($i < 5){
-                $fila = random_int(1, 20);
-                $columna = random_int(1, 15);
-                if($mTeatro[$fila][$columna] === " x "){
-                    $mTeatro[$fila][$columna] = $aNombres[$i];
-                    $i++;
-                }
-            }
-            
-            /*for($i = 0; $i < 20; $i++){
-                for($j = 0; $j < 15; $j++){
-                    if($mTeatro[$i][$j] === " x "){
-                        $mTeatro[$i][$j] = ($i+1)."-".($j+1);
-                    }
-                }
-            }*/
+            $aTeatro[2][8] = 'Pepe';
+            $aTeatro[4][12] = 'Manuel';
+            $aTeatro[3][4] = 'Teresa';
+            $aTeatro[12][9] = 'Ainhoa';
+            $aTeatro[20][1] = 'Miguel';
             
             // Mostramos la información de la matriz.
             echo "<table>";
-            for($i = 1; $i <= $FILAS; $i++){
+            for($iFila = 1; $iFila <= NUMFILAS; $iFila++){
                 echo "<tr>";
-                echo "<td class='filas'>Fila ".($i)."</td>";
-                for($j = 1; $j <= $ASIENTOS; $j++){
-                    if($mTeatro[$i][$j] === " x "){
-                        echo "<td class='libre'>F".($i)."-A".($j)."</td>";
+                echo "<td class='filas'>Fila ".($iFila)."</td>";
+                for($iColumna = 1; $iColumna <= NUMASIENTOS; $iColumna++){
+                    if(is_null($aTeatro[$iFila][$iColumna])){
+                        echo "<td class='libre'>F".($iFila)."-A".($iColumna)."</td>";
                     } else{
-                        echo "<td class='ocupado'>" . $mTeatro[$i][$j]. "</td>";
+                        echo "<td class='ocupado'>" . $aTeatro[$iFila][$iColumna]. "</td>";
                     }
                 }
                 echo "</tr>";
@@ -90,23 +84,33 @@
             echo "<h3>Tabla con foreach()</h3>";
             
             echo "<table>";
+            echo "<tr><td class='vacio'}></td>";
+            for($iColumna = 1; $iColumna <= NUMASIENTOS; $iColumna++){
+                echo "<td class='columnas'>A-".$iColumna."</td>";
+            }
+            echo "</tr>";
             // En este caso estamos introduciendo en la variable $filas el número de la fila en la que estamos.
             // En la variable $aAsientos tenemos el array de cada $fila.
-            foreach ($mTeatro as $filas => $aAsientos) {
+            foreach ($aTeatro as $iFilas => $aAsientos) {
                 echo "<tr>";
-                echo "<td class='filas'>Fila ".($filas)."</td>";
+                echo "<td class='filas'>Fila ".($iFilas)."</td>";
                 // Ahora mediante otro foreeach() inicializamos la variable $asiento con el numero de asiento.
                 // Y la variable $valor con el contenido de la posición $filas.
-                foreach ($aAsientos as $asiento => $valor) {
-                    if($valor === " x "){
-                        echo "<td class='libre'>F".($asiento)."-A".$filas."</td>";
+                foreach ($aAsientos as $iAsiento => $nombre) {
+                    if(is_null($nombre)){
+                        echo "<td class='libre'>F".($iFilas)."-A".$iAsiento."</td>";
                     } else{
-                        echo "<td class='ocupado'>" . $valor. "</td>";
+                        echo "<td class='ocupado'>" . $nombre. "</td>";
                     }   
-                    
                 }
+                echo "<td class='filas'>Fila ".($iFilas)."</td>";
                 echo "</tr>";
             }
+            echo "<tr><td class='vacio'></td>";
+            for($iColumna = 1; $iColumna <= NUMASIENTOS; $iColumna++){
+                echo "<td class='columnas'>A-".$iColumna."</td>";
+            }
+            echo "</tr>";
             echo "</table>";
         ?>
     </body>
