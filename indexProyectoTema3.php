@@ -166,8 +166,8 @@
                 <tr>
                     <td>13</td>
                     <td>Crear una función que cuente el número de visitas a la página actual desde una fecha concreta.</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="ejerciciosPHP/ejercicio13.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="codigosPHP/codigo13.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>14</td>
