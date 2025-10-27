@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ejercicio 8</title>
+        <style>
+            *{
+                margin: 0 auto;
+                padding: 0 auto;
+            }
+            body{
+                font-family: Arial, sans-serif;
+                background: #f4f6f9;
+                align-items: center;
+                text-align: center;
+            }
+
+            nav{
+                background-color: #456D96; 
+                color: white;
+            }
+
+            .ejercicio{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                width: 750px;
+                border: 1px solid black;
+                border-radius: 10px;
+
+                p{
+                    font-weight: bold;
+                }
+            }
+
+            footer{
+                margin: auto;
+                background-color: #456d96;
+                text-align: center;
+                align-content: center;
+                height: 50px;;
+                color: white;
+
+                & a{
+                   text-decoration: none; 
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h2>DWES - Tema 3</h2>
+            <h2>Ejercicio 8</h2>
+        </nav>
+        <main>
+            <div class="ejercicio">
+                <?php
+                    /**
+                     * @author Álvaro Allén Perlines
+                     * @since 27-10-2025
+                     * Mostrar la dirección ip del equipo con el que se está accediendo.
+                     */
+
+                    //Declaramos la variable y la inicializamos con el valor de la dirección ip.
+                    $hostname = $_SERVER['REMOTE_ADDR'];
+
+                    //Mostramos por pantalla el contenido de la variable.
+                    echo "Mi IP es: <p>" . $hostname."</p>";
+                ?>
+            </div>
+        </main>  
+        <footer>
+            <div>
+                <a href="../indexProyectoTema3.php">
+               Álvaro Allén Perlines
+                </a>
+                <time datetime="2025-10-27">27-10-2025</time>
+            </div>
+        </footer>
+    </body>
+</html>
