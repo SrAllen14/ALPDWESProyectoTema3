@@ -106,8 +106,13 @@
                     
                     // Usamos reset para situar el puntero en la primera fila de la matriz $mTeatro.
                     reset($aTeatro);
+                    
+                    // Iniciamos el tablero.
                     echo "<table>";
-                    while (($aColumna = current($aTeatro)) !== false) {
+                    // Le damos a la variable $aColumna el valor de $aTeatro usando current(). Como hemos reseteado está en la primera posición.
+                    // En caso de no tener nada (current($aTeatro = false) se saldrá del while.
+                    while (($aColumna = current($aTeatro)) !== false) {         
+                        // Inicializamos la variable $numFila con el número de la fila al que apunta $aTeatro.
                         $numFila = key($aTeatro);
 
                         echo "<tr>";
@@ -115,21 +120,23 @@
 
                         // Recorremos cada asiento (columna) de la fila actual
                         reset($aColumna);
-                        while (($valor = current($aColumna)) !== false) {
+                        // Le damos a la variable $aAsiento el valor de $aColumna usando current(). Como hemos reseteado está en la primera posición.
+                        // En caso de no tener nada (current($aColumna = false) se saldrá del while.
+                        while (($aAsiento = current($aColumna)) !== false) {
                             $numAsiento = key($aColumna);
 
-                            if ($valor !== null) {
-                                echo "<td class='ocupado'>$valor</td>";
+                            if ($aAsiento !== null) {
+                                echo "<td class='ocupado'>$aAsiento</td>";
                             } else {
                                 echo "<td class='libre'>F{$numFila}-A{$numAsiento}</td>";
                             }
-
+                            // Pasamos a la siguiente columna.
                             next($aColumna);
                         }
 
                         echo "<td class='filas'>Fila $numFila</td>";
                         echo "</tr>";
-
+                        // Pasamos a la siguiente fila.
                         next($aTeatro);
                     }
                     echo "</table>";
@@ -146,27 +153,3 @@
         </footer>
     </body>
 </html>
-
-<!-- do{
-                        // Declaramos e inicializamos al array $aFila con los valores de la primera fila
-                        // de la matriz $mTeatro
-                        $aColumna = current($aTeatro);
-
-                        // Situamos el puntero en el inicio del array $aFila que contiene los valores de la
-                        // primera fila.
-                        reset($aColumna);
-
-                        echo "<tr>";
-                        echo "<td class='filas'>Fila ".(key($aTeatro))."</td>";
-                            do{
-                                if(current($aColumna)!== null){
-                                    echo "<td class='ocupado'>". current($aColumna)."</td>"; 
-                                } else{
-                                    echo "<td class='libre'>F".(key($aTeatro))."-A".(key($aColumna))."</td>";      // key() devuelve la clave del elemento del array. En este caso la usamos para enumerar los asientos.
-                                }
-                            }while(next($aColumna));                   // Pasamos el puntero al siguiente valor del array $aFila. En caso de no haber valor, devolverá false y saldrá del bucle.  
-                            echo "<td class='filas'>Fila ".(key($aTeatro))."</td>";
-                            echo "</tr>";
-                            
-                    }while(next($aTeatro));                            // Pasamos el puntero a la siguiente fila de la matriz $mTeatro. En caso de no haber valor, devolverá false y saldrá del bucle.
- -->
