@@ -195,7 +195,7 @@
                 </tr>
                 <tr>
                     <td>18</td>
-                    <td>Recorrer el array anterior utilizando funciones para obtener el mismo resultado. (No funciona bien)</td>
+                    <td>Recorrer el array anterior utilizando funciones para obtener el mismo resultado.</td>
                     <td><a href="codigoPHP/ejercicio18.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
                     <td><a href="mostrarcodigo/codigo18.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
@@ -227,7 +227,7 @@
                 </tr>
                 <tr>
                     <td>23</td>
-                    <td>(INCOMPLETO)Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la misma página las preguntas y las respuestas
+                    <td>Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la misma página las preguntas y las respuestas
      recogidas; en el caso de que alguna respuesta esté vacía o errónea volverá a salir el formulario con el mensaje correspondiente.</td>
                     <td><a href="codigoPHP/ejercicio23.php"><img src="webroot/images/play.png" alt="boton_play"></td>
                     <td><a href="mostrarcodigo/codigo23.php"><img src="webroot/images/code.png" alt="boton_code"></td>
@@ -237,8 +237,8 @@
                     <td>Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la  misma página las preguntas y las respuestas
      recogidas; en el caso de que alguna respuesta esté vacía o errónea volverá a salir el formulario con el mensaje correspondiente, pero las
      respuestas que habíamos tecleado correctamente aparecerán en el formulario y no tendremos que volver a teclearlas.</td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td><a href="codigoPHP/ejercicio24.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                    <td><a href="mostrarcodigo/codigo24.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 </tr>
                 <tr>
                     <td>25</td>
@@ -273,7 +273,7 @@
             <a href="/index.html">
            Álvaro Allén Perlines
             </a>
-            <time datetime="2025-10-27">27-10-2025</time>
+            <time datetime="2025-10-28">28-10-2025</time>
         </div>
     </footer>
 
