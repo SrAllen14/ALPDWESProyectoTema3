@@ -85,8 +85,8 @@
 
                     // Declaramos las constantes $FILAS y $ASIENTOS que almacenan el número 
                     // de filas y asientos que tiene el teatro.
-                    define('NUMFILAS', '20');
-                    define('NUMASIENTOS', '15');
+                    define('NUMFILAS', 20);
+                    define('NUMASIENTOS', 15);
                     // Declaramos las variables.
                     $aTeatro;
 
