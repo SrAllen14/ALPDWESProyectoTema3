@@ -71,7 +71,7 @@
     <body>
         <nav>
             <h2>DWES - Tema 3</h2>
-            <h2>Ejercicio 15</h2>
+            <h2>Ejercicio 18</h2>
         </nav>
         <main>
             <div class="ejercicio">
@@ -107,7 +107,47 @@
                     // Usamos reset para situar el puntero en la primera fila de la matriz $mTeatro.
                     reset($aTeatro);
                     echo "<table>";
-                    do{
+                    while (($aColumna = current($aTeatro)) !== false) {
+                        $numFila = key($aTeatro);
+
+                        echo "<tr>";
+                        echo "<td class='filas'>Fila $numFila</td>";
+
+                        // Recorremos cada asiento (columna) de la fila actual
+                        reset($aColumna);
+                        while (($valor = current($aColumna)) !== false) {
+                            $numAsiento = key($aColumna);
+
+                            if ($valor !== null) {
+                                echo "<td class='ocupado'>$valor</td>";
+                            } else {
+                                echo "<td class='libre'>F{$numFila}-A{$numAsiento}</td>";
+                            }
+
+                            next($aColumna);
+                        }
+
+                        echo "<td class='filas'>Fila $numFila</td>";
+                        echo "</tr>";
+
+                        next($aTeatro);
+                    }
+                    echo "</table>";
+                ?>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <a href="../indexProyectoTema3.php">
+                Álvaro Allén Perlines
+                </a>
+                <time datetime="2025-10-28">28-10-2025</time>
+            </div>
+        </footer>
+    </body>
+</html>
+
+<!-- do{
                         // Declaramos e inicializamos al array $aFila con los valores de la primera fila
                         // de la matriz $mTeatro
                         $aColumna = current($aTeatro);
@@ -129,17 +169,4 @@
                             echo "</tr>";
                             
                     }while(next($aTeatro));                            // Pasamos el puntero a la siguiente fila de la matriz $mTeatro. En caso de no haber valor, devolverá false y saldrá del bucle.
-                    echo "</table>";
-                ?>
-            </div>
-        </main>
-        <footer>
-            <div>
-                <a href="../indexProyectoTema3.php">
-                Álvaro Allén Perlines
-                </a>
-                <time datetime="2025-10-27">27-10-2025</time>
-            </div>
-        </footer>
-    </body>
-</html>
+ -->
