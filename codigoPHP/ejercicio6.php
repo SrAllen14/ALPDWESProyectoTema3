@@ -60,15 +60,30 @@
                      */
 
                     // Inicializamos las variables.
-                    $oFechaHoy = new DateTime("now", new DateTimeZone('Europe/Madrid'));
-
+                    $dateFechaHoy = new DateTime("now", new DateTimeZone('Europe/Madrid'));
+                    
+                    // Establecer la configuración de formatos a español.
+                    setlocale(LC_TIME, 'es_ES.UTF-8', 'es_ES', 'spanish');
+                    
                     // Mostramos la fecha actual en Madrid, España.
-                    echo "<p>Fecha actual: </p>" . $oFechaHoy->format('d-m-y h:i:s');
+                    echo "<p>Fecha actual: </p>" . $dateFechaHoy->format('d-m-y h:i:s');
                     echo "<br>";
                     echo "<br>";
 
                     // Muestra por pantalla la fecha actual con 60 dias añadidos.
-                    echo "<p>Fecha dentro de 60 días: </p>" . $oFechaHoy->add(new DateInterval('P60D'))->format('d-m-y h:i:s');
+                    echo "<p>Fecha dentro de 60 días: </p>" . $dateFechaHoy->add(new DateInterval('P60D'))->format('d-m-y h:i:s');
+                    
+                    echo "<br>";
+                    echo "<br>";
+                    // Otra forma de mostrar este ejercicio es como en el ejercicio 3 de este tema.
+                    // Ejemplo de formato: martes, 4 de noviembre de 2025
+                    $dateFechaHoy = new DateTime("now", new DateTimeZone('Europe/Madrid'));
+                    // Mostramos la fecha actual con dicho formato.
+                    echo "<p> Fecha actual: </p>". strftime("%A %d de %B de %Y", $dateFechaHoy->getTimestamp());
+                    echo "<br>";
+                    echo "<br>";
+                    // Muestra por pantalla la fecha actual con 60 dias añadidos con dicho formato.
+                    echo "<p>Fecha dentro de 60 días: </p>" .strftime("%A %d de %B de %Y", $dateFechaHoy->add(new DateInterval('P60D'))->getTimestamp());
                 ?>
             </div>
         </main>
@@ -77,7 +92,7 @@
                 <a href="../indexProyectoTema3.php">
                Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-10-27">27-10-2025</time>
+                <time datetime="2025-11-04">04-11-2025</time>
             </div>
         </footer>
     </body>

@@ -20,6 +20,7 @@
             }
 
             .ejercicio{
+                padding: 20px;
                 text-align: justify;
                 margin-top: 10px;
                 margin-bottom: 10px;
@@ -29,6 +30,35 @@
 
                 p{
                     font-weight: bold;
+                }
+                
+                label{
+                    font-weight: bold;
+                }
+                
+                input{
+                    width: 250px;
+                    height: 30px;
+                }
+                
+                button{
+                    margin-top: 20px;
+                    width: 125px;
+                    height: 30px;
+                    border-radius: 5px;
+                    background-color: lightblue;
+                }
+                
+                #tipoFormulario{
+                    background-color: lightgray;
+                }
+                
+                #nombre{
+                    background-color: #FCF8CC;
+                }
+                
+                #edad{
+                    background-color: #FCF8CC;
                 }
             }
 
@@ -98,7 +128,7 @@
                     if (isset($_REQUEST['enviar'])) {//se cumple si el boton es submit
                         //Validación de los datos de los campos del formulario
                         $aErrores['nombre'] = validacionFormularios::comprobarAlfabetico($_REQUEST['nombre'], 80, 1, 1);
-                        $aErrores['edad'] = validacionFormularios::comprobarEntero($_REQUEST['edad'], 120, 0, 0);
+                        $aErrores['edad'] = validacionFormularios::comprobarEntero($_REQUEST['edad'], 100, 0, 1);
                         $aErrores['fecha'] = miLibreriaValidacion::validarNacimiento($_REQUEST['fecha'], $_REQUEST['edad']);
 
                         //recorre el array de errores para detectar si hay alguno
@@ -121,7 +151,7 @@
                         //Se recorre el array de las respuestas y se muestran
                         print("<br><h3>Respuestas del usuario</h3><br>");
                         foreach ($aRespuestas as $campo => $valorCampo) {
-                            print("<p>El $campo del usuario : " . $valorCampo . '</p><br>');
+                            print("<p>El $campo del usuario: </p>" . $valorCampo . '<br>');
                         }
                     } else {
                         //si hay algún error se vuelve a mostrar el formulario
@@ -132,16 +162,16 @@
 
                             <label for="tipoFormulario">Tipo del formulario</label><br>
                             <input name="tipoFormulario" id="tipoFormulario" type="text" value="Formulario de Seguridad" readonly><br>
-
+                            <br>
                             <label for="nombre">Nombre completo:</label>
                             <a style='color:red'><?php echo $aErrores['nombre'] ?></a><br>
-                            <input  name="nombre" id="nombre" type="text" value='<?php echo(empty($aErrores['nombre'])) ? ($_REQUEST['nombre'] ?? '') : ''; ?>'><br>
-
+                            <input name="nombre" id="nombre" type="text" value='<?php echo(empty($aErrores['nombre'])) ? ($_REQUEST['nombre'] ?? '') : ''; ?>'><br>
+                            <br>
                             <label for="edad">Edad:</label>
                             <a style='color:red'><?php echo $aErrores['edad'] ?></a><br>
-                            <input name="edad" id="edad" type="number" value='<?php echo(empty($aErrores['edad'])) ? ($_REQUEST['edad'] ?? '') : ''; ?>'><br>
-
-                            <label for="carnet">Introduzca la fecha de nacimiento</label><br>
+                            <input name="edad" id="edad" type="text" value='<?php echo(empty($aErrores['edad'])) ? ($_REQUEST['edad'] ?? '') : ''; ?>'><br>
+                            <br>
+                            <label for="carnet">Introduzca la fecha de nacimiento:</label>
                             <a style='color:red'><?php echo $aErrores['fecha'] ?></a><br>
                             <input type="date" name="fecha" id="nacimiento"><br>
 
@@ -158,7 +188,7 @@
                 <a href="../indexProyectoTema3.php">
                Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-10-28">28-10-2025</time>
+                <time datetime="2025-10-28">04-11-2025</time>
             </div>
         </footer>
     </body>
