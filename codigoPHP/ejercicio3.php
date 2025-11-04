@@ -68,11 +68,10 @@
 
                     // Mostrar por pantalla la fecha con el formato en castellano.
                     print("<p>Formato de fecha y hora: 'Hoy es NombreDia DD de MM de YY y la hora es HH:MM:SS AM/PM'</p>");
-                    echo "Hoy es " . $fecha->format("l") . " " . $fecha->format("d") . " de " . $fecha->format("M") . " de " . $fecha->format("y") . " y la hora es " . $fecha->format("h:i:s a");
-
+                    echo strftime("%A %d de %B de %Y", $fecha->getTimestamp());
+                    
                     echo "<br>";
                     echo "<br>";
-
                     // Mostrar la fecha con formato xx/xx/xxxx.
                     print("<p>Formato de fecha: DD-MM-YY</p>");
                     echo $fecha->format("d-m-y");
@@ -98,7 +97,7 @@
                 <a href="../indexProyectoTema3.php">
                Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-10-27">27-10-2025</time>
+                <time datetime="2025-11-04">04-11-2025</time>
             </div>
         </footer>
     </body>

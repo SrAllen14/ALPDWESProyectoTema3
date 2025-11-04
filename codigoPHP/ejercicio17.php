@@ -92,9 +92,9 @@
                     $aTeatro;
 
                     // Inicializamos la matriz de 20X15 con null como valor por defecto.
-                    for($iFila = 1; $iFila <= NUMFILAS; $iFila++){
-                        for($iColumna = 1; $iColumna <= NUMASIENTOS; $iColumna++){
-                            $aTeatro[$iFila][$iColumna] = null;
+                    for($numFila = 1; $numFila <= NUMFILAS; $numFila++){
+                        for($numColumna = 1; $numColumna <= NUMASIENTOS; $numColumna++){
+                            $aTeatro[$numFila][$numColumna] = null;
                         }
                     }
 
@@ -109,30 +109,66 @@
 
                     echo "<table>";
                     echo "<tr><td class='vacio'}></td>";
-                    for($iColumna = 1; $iColumna <= NUMASIENTOS; $iColumna++){
-                        echo "<td class='columnas'>A-".$iColumna."</td>";
+                    for($numColumna = 1; $numColumna <= NUMASIENTOS; $numColumna++){
+                        echo "<td class='columnas'>A-".$numColumna."</td>";
                     }
                     echo "</tr>";
                     // En este caso estamos introduciendo en la variable $filas el número de la fila en la que estamos.
                     // En la variable $aAsientos tenemos el array de cada $fila.
-                    foreach ($aTeatro as $iFilas => $aAsientos) {
+                    foreach ($aTeatro as $numFilas => $aAsientos) {
                         echo "<tr>";
-                        echo "<td class='filas'>Fila ".($iFilas)."</td>";
+                        echo "<td class='filas'>Fila ".($numFilas)."</td>";
                         // Ahora mediante otro foreeach() inicializamos la variable $asiento con el numero de asiento.
                         // Y la variable $valor con el contenido de la posición $filas.
                         foreach ($aAsientos as $iAsiento => $nombre) {
                             if(is_null($nombre)){
-                                echo "<td class='libre'>F".($iFilas)."-A".$iAsiento."</td>";
+                                echo "<td class='libre'>F".($numFilas)."-A".$iAsiento."</td>";
                             } else{
                                 echo "<td class='ocupado'>" . $nombre. "</td>";
                             }   
                         }
-                        echo "<td class='filas'>Fila ".($iFilas)."</td>";
+                        echo "<td class='filas'>Fila ".($numFilas)."</td>";
                         echo "</tr>";
                     }
                     echo "<tr><td class='vacio'></td>";
-                    for($iColumna = 1; $iColumna <= NUMASIENTOS; $iColumna++){
-                        echo "<td class='columnas'>A-".$iColumna."</td>";
+                    for($numColumna = 1; $numColumna <= NUMASIENTOS; $numColumna++){
+                        echo "<td class='columnas'>A-".$numColumna."</td>";
+                    }
+                    echo "</tr>";
+                    echo "</table>";
+                    
+                    
+                    echo "<br>";
+                    echo "<br>";
+                    // Vamos a recorrer la matriz mediante un for();
+                    echo "<h3>Tabla con for()</h3>";
+
+                    echo "<table>";
+                    echo "<tr><td class='vacio'}></td>";
+                    for($numColumna = 1; $numColumna <= NUMASIENTOS; $numColumna++){
+                        echo "<td class='columnas'>A-".$numColumna."</td>";
+                    }
+                    echo "</tr>";
+                    // En este caso estamos introduciendo en la variable $filas el número de la fila en la que estamos.
+                    // En la variable $aAsientos tenemos el array de cada $fila.
+                    for ($numFila = 1; $numFila <= NUMFILAS; $numFila++) {
+                        echo "<tr>";
+                        echo "<td class='filas'>Fila ".($numFila)."</td>";
+                        // Ahora mediante otro foreeach() inicializamos la variable $asiento con el numero de asiento.
+                        // Y la variable $valor con el contenido de la posición $filas.
+                        for ($numColumna = 1;$numColumna <= NUMASIENTOS; $numColumna++) {
+                            if(is_null($aTeatro[$numFila][$numColumna])){
+                                echo "<td class='libre'>F".($numFila)."-A".$numColumna."</td>";
+                            } else{
+                                echo "<td class='ocupado'>".$aTeatro[$numFila][$numColumna]."</td>";
+                            }   
+                        }
+                        echo "<td class='filas'>Fila ".($numFila)."</td>";
+                        echo "</tr>";
+                    }
+                    echo "<tr><td class='vacio'></td>";
+                    for($numColumna = 1; $numColumna <= NUMASIENTOS; $numColumna++){
+                        echo "<td class='columnas'>A-".$numColumna."</td>";
                     }
                     echo "</tr>";
                     echo "</table>";
