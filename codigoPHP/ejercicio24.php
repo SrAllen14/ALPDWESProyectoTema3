@@ -146,7 +146,8 @@
                         //REllenamos el array de respuesta con los valores que ha introducido el usuario
                         $aRespuestas['nombre'] = $_REQUEST['nombre'];
                         $aRespuestas['edad'] = $_REQUEST['edad'];
-                        $aRespuestas['fecha'] = $_REQUEST['fecha'];
+                        $fecha = new DateTime($_REQUEST['fecha']);
+                        $aRespuestas['fecha'] = strftime("%A %d de %B de %Y", $fecha->getTimestamp());
 
                         //Se recorre el array de las respuestas y se muestran
                         print("<br><h3>Respuestas del usuario</h3><br>");
@@ -188,7 +189,7 @@
                 <a href="../indexProyectoTema3.php">
                Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-10-28">04-11-2025</time>
+                <time datetime="2025-10-28">06-12-2025</time>
             </div>
         </footer>
     </body>
